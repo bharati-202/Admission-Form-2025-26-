@@ -1,43 +1,177 @@
-# Admission-Form-2025-26-
-Sample admission form of New University
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>
+        Admission Form
+    </title>
+    <style>
+         @keyframes colorChange {
+            0% {
+                color: rgb(247, 28, 28);
+            }
+            100% {
+                color: darkblue;
+            }
+        }
 
-This sample project contains the HTML and CSS code for an Admission Form for the academic year 2025-26. It includes fields for collecting personal, course, and academic information from applicants in a structured and responsive layout.
+    h1{
+        color: darkblue;
+        background-color: rgb(234, 170, 228);
+        padding: 10px;
+        margin: 50px;
+        border-radius: 4px;
+        text-align: center;
+        animation: colorChange 2s infinite; 
+    }
+    h2{
+        text-align: center;
+        font-size: 30px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-variant: small-caps;
+        font-synthesis: style;
+        color: rgb(255, 14, 14);
+        text-shadow: 
+                1px 1px 0 rgb(25, 24, 24), /* Bottom right shadow */
+                -1px -1px 0 rgb(25, 24, 24), /* Top left shadow */
+                -1px 1px 0 rgb(25, 24, 24), /* Bottom left shadow */
+                1px -1px 0 rgb(25, 24, 24);/* Top right shadow */
+            font-size: 50px;
+        
+    }
+    h3{
+        font-size: 30px;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+        text-decoration-color: red;
+        text-decoration-thickness: 1px;
+    }
+    body{
+        font-family: Arial, sans-serif;
+        margin: 0px;
+        padding: 0px;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        
 
-Features:
+    }
+    .container{
+        width: 50%;
+        margin: 50px auto;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0px 0px 10px 0px #fcabab;
+    }
+    form{
+        width: 96.5%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        align-content: center;
+    }
+    label{
+        margin-top: 15px;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    input, select, textarea{
+        width: 96.5%;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid rgb(58, 57, 57);
+        border-radius: 5px;
+        display: flex;
+        
+    }
+    input[type="button"]{
+        background-color: darkgoldenrod;
+        color: black;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        padding: 15px;
+        margin-top: 20px;
+        width: 100px;
+        font-size: 20px;
+        margin-left: auto;
+        
+    }
+    input[type="button"] :hover{
+        background-color: lightgreen;
+    }
 
-1) HTML Structure:
+    input:focus {
+        border-color: red; 
+        outline: none; 
+    }
+    </style>
+    </head>
 
-The form includes three main sections:
-Personal Information (First Name, Last Name, Email, Phone Number, and Address)
-Course Information (Dropdown to select a course like M.Sc. Mathematics, Chemistry, or Physics)
-Academic Information (Degree, University Name, and CGPA/Percentage)
+    <body>
+        <div class="container">
+            <h1>
+                Admission Form 2025-26
+            </h1>
+            <h2>
+                New University
+            </h2>
+            <form action="#" method="post">
+            <!---Personal Information Section--->
+                <h3>
+                    Personal Information
+                </h3>
+                <label for="name">First name:</label>
+                <input type="text" id="name" name="first name" placeholder="First" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 20px; ">
+                
+                
+         
+                <label for="name">Last name:</label>
+                <input type="text" id="name" name="name" placeholder="Last" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 20px;">
+                
 
-2) CSS Styling:
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 20px;">
+                
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="number" name="number" placeholder="Enter Phone number" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 20px;">
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" placeholder="Enter current address..." style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; resize: none; width: 96.5%; height: 100px; font-size: 20px;"></textarea>
+                <br>
+                <!--Course information Section-->
+                <h3>
+                    Course Information
+                </h3>
+                <label for="course" >Select Course:</label>
+                <select id="course" name="course" style="font-size: 20px;">
+                    <option value="msc-mathematics" style=" font-size: 20px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">M.sc. Mathematics</option>
+                    <option value="msc-chemistry" style=" font-size: 20px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">M.sc.Chemistry</option>
+                    <option value="msc-physics" style=" font-size: 20px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">M.sc. Physics</option>
+                </select>
+                <br>
+                <!--Acadamic Information Section-->
+                <h3>
+                    Acadamic Information
+                </h3>
+                <label for="degree">Graduation degree:</label>
+                <input type="text" id="degree" name="degree" placeholder="Enter your Graduation degree" style="font-size: 20px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                <br>
+                <label for="university">University name:</label>
+                <input type="text" id="university" name="university" placeholder="Enter your University name" style="font-size: 20px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                <br>
+                <label for="percentage">Percentage/CGPA:</label>
+                <input type="text" id="percentage" name="percentage" placeholder="Enter your percentage/CGPA" style="font-size: 20px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                <br>
 
-Keyframe Animation: A color-changing animation applied to the h1 tag for a dynamic appearance.
-Responsive Design: The layout uses a flexible design with appropriate margins and padding to fit different screen sizes.
+                <!--Submission Button-->
+                <input type="button" id="submit" name="submit" value="Submit" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+            </form>
+        </div>
+    </body>
 
-Text Styling:
-The h2 element includes a shadow effect to enhance text visibility.
-Font families, sizes, and input styles are consistent across the form for better user experience.
-Interactive Elements: The form includes a hover effect for the "Submit" button, changing the background color on hover.
+</html>
 
-Form Fields:
-Input fields are provided for the applicant’s name, email, phone number, address, graduation degree, university name, and CGPA.
-Dropdown for course selection with options for M.Sc. Mathematics, Chemistry, and Physics.
-All inputs use consistent font size and style for readability.
-
-Button Styling:
-A styled Submit button with hover effects to enhance user interaction.
-Rounded corners and a distinct color scheme are used to highlight the button.
-Accessibility:
-
-The form labels are linked with respective input fields for better accessibility and user guidance.
-The form is easy to navigate and includes focus states for input fields to indicate where the user is typing.
-Usage Instructions:
-Open the HTML file in a web browser to view and interact with the form.
-Users can fill in their personal, course, and academic details in the form fields.
-The "Submit" button is styled but does not have backend functionality. You can enhance the form by adding backend logic (PHP, JavaScript) for form submission.
-Customization:
-You can customize the form by adding more fields or modifying existing ones based on the requirements.
-To integrate the form with a server, you can add functionality to handle form submission using a backend language like PHP or a JavaScript-based solution.
